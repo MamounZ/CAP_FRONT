@@ -1,9 +1,12 @@
 "use client"
 import AuthCard from "@/components/auth/auth-card";
+import Divider from "@/components/auth/auth-divider";
 import AuthHeader from "@/components/auth/auth-header";
+import AuthInput from "@/components/auth/auth-input";
 import AuthLayout from "@/components/auth/auth-layout";
 import AuthLogo from "@/components/auth/auth-logo";
-import Image from "next/image";
+import GithubButton from "@/components/auth/GithubButton";
+import Link from "next/link";
 import {useState} from "react"
 
 export default function RegisterPage(){
@@ -15,8 +18,7 @@ export default function RegisterPage(){
 	function handleSubmit(event : React.FormEvent){
 		event.preventDefault();
 		setError(null);
-		setEmail(email.trim())
-		if (!email || !password || !confirmPassword){
+		if (!email.trim() || !password || !confirmPassword){
 			setError("Please fill in all fields")
 			return
 		}
@@ -45,50 +47,24 @@ export default function RegisterPage(){
 						{error}
 					</div>
 				)}
-				<form onSubmit={handleSubmit} className="mt-6">
-					<div>
-						<label htmlFor="email" className="block text-sm mb-2 text-gray-300">
-							Email
-						</label>
-						<input
-							id="email"
-							type="email"
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-							placeholder="you@example.com"
-							className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all"
-						/>
-					</div>
-					<div className="mt-4">
-						<label htmlFor="password" className="block text-sm mb-2 text-gray-300">
-							Password
-						</label>
-						<input
-							id="password"
-							type="password"
-							value={password}
-							onChange={(e) => setPassword(e.target.value)}
-							placeholder="Enter your password"
-							className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all"
-						/>
-					</div>
-					<div className="mt-4">
-						<label htmlFor="confirmPassword" className="block text-sm mb-2 text-gray-300">
-							Confirm Password
-						</label>
-						<input
-							id="confirmPassword"
-							type="password"
-							value={confirmPassword}
-							onChange={(e) => setConfirmPassword(e.target.value)}
-							placeholder="Confirm your password"
-							className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all"
-						/>
-					</div>
+				<form onSubmit={handleSubmit}>
+					<AuthInput id="email" type="email" label="Email" placeholder="you@example.com" state={email} setState={setEmail}/>
+					<AuthInput id="password" type="password" label="Password" placeholder="Enter your password" state={password} setState={setPassword}/>
+					<AuthInput id="confirmPassword" type="password" label="Confirm Password" placeholder="Confirm your password" state={confirmPassword} setState={setConfirmPassword}/>
 					<button type="submit" className="w-full mt-10 px-4 py-3 rounded-lg text-black font-bold bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
 						Sign Up
 					</button>
 				</form>
+				<Divider />
+				<GithubButton/>
+				<div className="mt-6 text-center">
+					<p className="text-gray-400">
+						Already have an account?{' '}
+						<Link href="/login" className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">
+							Login
+						</Link>
+					</p>
+				</div>
 			</AuthCard>
 		</AuthLayout>
 	)
