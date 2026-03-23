@@ -10,7 +10,7 @@ export default function MarketingLayout({children}: LayoutProps){
 		<div className="min-h-screen bg-black text-white flex flex-col" >
 			<header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-xl">
 				<nav>
-					<div className="mx-auto max-w-7xl p-6">
+					<div className="mx-auto max-w-7xl px-6 py-4">
 						<div className="flex items-center justify-between">
 							<div className=" flex items-center gap-8">
 								<Image src="/assets/CAPLogo.png" alt="logo" width={72} height={72} loading="eager" className="drop-shadow-[0_0_12px_rgba(34,211,238,0.55)] w-auto h-auto"/>
@@ -42,9 +42,26 @@ export default function MarketingLayout({children}: LayoutProps){
 
 				</nav>
 			</header>
-			{children}
-			<footer>
 
+			<main className="flex-1">
+			</main>
+
+			<footer>
+				<div className="min-w-screen border border-white/10 p-6 flex justify-center">
+					<div className=" min-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
+						<p className="text-sm text-gray-400">
+							© 2026 CAP. All rights reserved.
+						</p>
+						<div className="flex items-center gap-6 text-sm">
+							<Link href="#TermsOfService" className="text-gray-400 hover:text-white transition-colors">
+								Terms of Service
+							</Link>
+							<Link href="#PrivacyPolicy" className="text-gray-400 hover:text-white transition-colors">
+								Privacy Policy
+							</Link>
+						</div>
+					</div>
+				</div>
 			</footer>
 		</div>
 	)
