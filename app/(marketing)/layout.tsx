@@ -43,24 +43,22 @@ export default function MarketingLayout({children}: LayoutProps){
 				</nav>
 			</header>
 
-			<main className="flex-1 pt-28">
+			<main className="flex-1">
 				{children}
 			</main>
 
-			<footer>
-				<div className="min-w-screen border border-white/10 p-6 flex justify-center">
-					<div className=" min-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
-						<p className="text-sm text-gray-400">
-							© 2026 CAP. All rights reserved.
-						</p>
-						<div className="flex items-center gap-6 text-sm">
-							<Link href="#TermsOfService" className="text-gray-400 hover:text-white transition-colors">
-								Terms of Service
-							</Link>
-							<Link href="#PrivacyPolicy" className="text-gray-400 hover:text-white transition-colors">
-								Privacy Policy
-							</Link>
-						</div>
+			<footer className="w-full border-t border-white/10 flex justify-center">
+				<div className="mx-auto min-w-7xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+					<p className="text-sm text-gray-400">
+						© 2026 CAP. All rights reserved.
+					</p>
+					<div className="flex items-center gap-6 text-sm">
+						<Link href="#TermsOfService" className="text-gray-400 hover:text-white transition-colors">
+							Terms of Service
+						</Link>
+						<Link href="#PrivacyPolicy" className="text-gray-400 hover:text-white transition-colors">
+							Privacy Policy
+						</Link>
 					</div>
 				</div>
 			</footer>
