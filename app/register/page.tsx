@@ -1,11 +1,11 @@
 "use client"
-import AuthCard from "@/components/auth/auth-card";
-import Divider from "@/components/auth/auth-divider";
-import AuthHeader from "@/components/auth/auth-header";
-import AuthInput from "@/components/auth/auth-input";
-import AuthLayout from "@/components/auth/auth-layout";
-import AuthLogo from "@/components/auth/auth-logo";
-import GithubButton from "@/components/auth/GithubButton";
+import AuthCard from "@/components/auth-card";
+import Divider from "@/components/auth-divider";
+import AuthHeader from "@/components/auth-header";
+import AuthInput from "@/components/auth-input";
+import AuthLayout from "@/components/auth-layout";
+import AuthLogo from "@/components/auth-logo";
+import GithubButton from "@/components/GithubButton";
 import Link from "next/link";
 import {useState} from "react"
 
@@ -51,7 +51,7 @@ export default function RegisterPage(){
 					<AuthInput id="email" type="email" label="Email" placeholder="you@example.com" state={email} setState={setEmail}/>
 					<AuthInput id="password" type="password" label="Password" placeholder="Enter your password" state={password} setState={setPassword}/>
 					<AuthInput id="confirmPassword" type="password" label="Confirm Password" placeholder="Confirm your password" state={confirmPassword} setState={setConfirmPassword}/>
-					<button type="submit" className="w-full mt-10 px-4 py-3 rounded-lg text-black font-bold bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
+					<button type="submit" className="w-full mt-10 px-4 py-3 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
 						Sign Up
 					</button>
 				</form>
