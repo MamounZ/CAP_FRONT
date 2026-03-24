@@ -44,7 +44,7 @@ export default function LoginPage(){
 							Forgot password?
 						</Link>
 					</div>
-					<button type="submit" className="w-full mt-4 px-4 py-3 rounded-lg text-black font-bold bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
+					<button type="submit" className="w-full mt-4 px-4 py-3 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
 						Sign In
 					</button>
 				</form>

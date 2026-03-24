@@ -39,7 +39,6 @@ export default function MarketingLayout({children}: LayoutProps){
 							</div>
 						</div>
 					</div>
-
 				</nav>
 			</header>
 
@@ -48,7 +47,7 @@ export default function MarketingLayout({children}: LayoutProps){
 			</main>
 
 			<footer className="w-full border-t border-white/10 flex justify-center">
-				<div className="mx-auto min-w-7xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+				<div className="mx-auto w-full max-w-7xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
 					<p className="text-sm text-gray-400">
 						© 2026 CAP. All rights reserved.
 					</p>
