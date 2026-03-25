@@ -7,7 +7,7 @@ export default function SeeItInAction(){
 	   return db.execute(query);
 }`;
 	return (
-		<section className="pt-32 flex flex-col items-center">
+		<section id="demo" className="pt-32 flex flex-col items-center">
 			<p className="text-7xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent text-center">
 				See It In Action
 			</p>

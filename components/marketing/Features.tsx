@@ -3,7 +3,7 @@ import { Shield, Zap, Code2, GitPullRequest, MessageSquare } from 'lucide-react'
 
 export default function Features(){
 	return (
-		<section className="pt-32 flex flex-col items-center">
+		<section id="features" className="pt-32 flex flex-col items-center">
 			<p className="text-7xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent text-center">
 				Powerful Features
 			</p>
