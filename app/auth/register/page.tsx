@@ -38,9 +38,9 @@ export default function RegisterPage(){
 	}
 
 	return (
-		<AuthCard>
+		<AuthCard width="sm:min-w-md">
 			<AuthLogo />
-			<AuthHeader title="Create Your Account" subtitle="Start reviewing code with AI in seconds"/>
+			<AuthHeader title="Create An Individual Account" subtitle="Start reviewing code with AI in seconds"/>
 			{error && (
 				<div className="mt-6 p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
 					{error}

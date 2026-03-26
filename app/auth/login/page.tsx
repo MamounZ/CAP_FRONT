@@ -26,7 +26,7 @@ export default function LoginPage(){
 
 
 	return (
-		<AuthCard>
+		<AuthCard width="sm:min-w-md">
 			<AuthLogo />
 			<AuthHeader title="Welcome Back" subtitle="Sign in to continue to your dashboard"/>
 			{error && (

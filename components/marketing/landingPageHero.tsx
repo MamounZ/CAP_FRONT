@@ -1,8 +1,11 @@
 "use client"
 import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function LandingPageHero() {
+	const router = useRouter();
+
 	return (
 		<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-10">
 			<div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
@@ -17,7 +20,7 @@ export default function LandingPageHero() {
 					<p className='text-7xl text-cyan-400 font-bold'>Ship Faster with AI</p>
 				</div>
 				<p className='max-w-2xl text-lg sm:text-xl text-gray-400'>AI-powered code analysis that detects security issues, optimizes performance, and refactors your codebase—all in real-time with inline PR reviews.</p>
-				<button className='mt-8 py-4 px-6 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50'>
+				<button onClick={() => router.push('/auth/AccountTypeSelector')} className='mt-8 py-4 px-6 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50'>
 					Start Free
 				</button>
 				<div className='w-full max-w-5xl border border-white/10 rounded-xl bg-black/50 backdrop-blur-xl shadow-2xl shadow-cyan-500/15 overflow-hidden'>

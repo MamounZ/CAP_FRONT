@@ -7,7 +7,7 @@ export default function AccountTypeSelector(){
 
 	return (
 		<div className="relative sm:min-w-xl justify-self-center">
-			<AuthCard>
+			<AuthCard width="sm:min-w-2xl">
 				<div className="flex flex-col items-center ">
 					<div className="text-center">
 						<p className="text-4xl font-bold bg-linear-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">Choose Account Type</p>
@@ -19,7 +19,8 @@ export default function AccountTypeSelector(){
 							<p className='text-gray-400 my-2'>For personal use and solo developers</p>
 						</div>
 
-						<div className="border border-cyan-400/50 rounded-xl bg-black hover:border-cyan-400 py-10 px-8">
+						<div className="relative border border-cyan-400/50 rounded-xl bg-black hover:border-cyan-400 py-10 px-8">
+							<p className='absolute top-3 right-3 text-xs rounded-3xl text-cyan-500 px-2 py-1 bg-cyan-500/20'>Recommended</p>
 							<p className='font-bold text-2xl my-2'>Team</p>
 							<p className='text-gray-400 my-2'>For teams, collaboration, and automation</p>
 							<p className='text-sm text-cyan-400 my-2'>Best for startups & dev teams</p>

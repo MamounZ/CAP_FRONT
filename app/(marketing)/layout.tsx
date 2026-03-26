@@ -33,6 +33,9 @@ export default function MarketingLayout({children}: LayoutProps){
 								<Link href="/auth/login" className=" p-3 bg-black/50 border border-gray-700 rounded-lg text-white font-medium hover:bg-black/70 hover:border-cyan-500/50 transition-all ">
 									Sign In
 								</Link>
+								<Link href="/auth/AccountTypeSelector" className=" p-3 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
+									Start Free
+								</Link>
 							</div>
 						</div>
 					</div>
