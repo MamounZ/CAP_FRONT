@@ -19,7 +19,7 @@ export default function AccountTypeSelector(){
 							<p className='text-gray-400 my-2'>For personal use and solo developers</p>
 						</div>
 
-						<div className="relative border border-cyan-400/50 rounded-xl bg-black hover:border-cyan-400 py-10 px-8">
+						<div onClick={() => router.push("/auth/TeamSetupForm")} className="relative border border-cyan-400/50 rounded-xl bg-black hover:border-cyan-400 py-10 px-8">
 							<p className='absolute top-3 right-3 text-xs rounded-3xl text-cyan-500 px-2 py-1 bg-cyan-500/20'>Recommended</p>
 							<p className='font-bold text-2xl my-2'>Team</p>
 							<p className='text-gray-400 my-2'>For teams, collaboration, and automation</p>
