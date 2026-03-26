@@ -30,7 +30,7 @@ export default function MarketingLayout({children}: LayoutProps){
 								</div>
 							</div>
 							<div className="flex items-center gap-4" >
-								<Link href="/login" className=" p-3 bg-black/50 border border-gray-700 rounded-lg text-white font-medium hover:bg-black/70 hover:border-cyan-500/50 transition-all ">
+								<Link href="/auth/login" className=" p-3 bg-black/50 border border-gray-700 rounded-lg text-white font-medium hover:bg-black/70 hover:border-cyan-500/50 transition-all ">
 									Sign In
 								</Link>
 							</div>
