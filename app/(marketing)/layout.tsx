@@ -15,7 +15,7 @@ export default function MarketingLayout({children}: LayoutProps){
 							<div className=" flex items-center gap-8">
 								<Image src="/assets/CAPLogo.png" alt="logo" width={60} height={60} loading="eager" className="drop-shadow-[0_0_12px_rgba(34,211,238,0.55)] w-auto h-auto"/>
 								<div className="hidden md:flex items-center gap-8">
-									<a href="#home" className="text-sm text-gray-300 hover:text-white transition-colors">
+									<a href="/#home" className="text-sm text-gray-300 hover:text-white transition-colors">
 										Home
 									</a>
 									<a href="/#features" className="text-sm text-gray-300 hover:text-white transition-colors">
@@ -49,7 +49,7 @@ export default function MarketingLayout({children}: LayoutProps){
 						© 2026 CAP. All rights reserved.
 					</p>
 					<div className="flex items-center gap-6 text-sm">
-						<Link href="#TermsOfService" className="text-gray-400 hover:text-white transition-colors">
+						<Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
 							Terms of Service
 						</Link>
 						<Link href="#PrivacyPolicy" className="text-gray-400 hover:text-white transition-colors">
