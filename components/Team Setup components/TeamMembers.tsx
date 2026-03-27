@@ -19,12 +19,18 @@ export default function TeamMembers({data, setData, next, back}: TeamMembersProp
 		const updated = [...data.members];
 		updated[index] = { ...updated[index], [field]: value };
 		setData({ ...data, members: updated });
-	};
+	}
+
 	const removeMember = (index: number) => {
 		const updated = data.members.filter((_, i) => i !== index);
 		setData({ ...data, members: updated });
-	};
-	console.log(data.members)
+	}
+
+	const addMember = () => {
+		const updated = [...data.members, {name: "",github: "",email: "",role: "Owner" as const,type: "manual" as const}]
+		setData({ ...data, members: updated });
+	}
+	
 	return(
 		<>
 			<p className="text-4xl font-bold">Team Members</p>
@@ -76,6 +82,7 @@ export default function TeamMembers({data, setData, next, back}: TeamMembersProp
 					</div>
 				)}
 			</div>
+			<p onClick={addMember} className="text-cyan-500 font-bold">+ Add Member</p>
 			<div className="flex justify-between">
 				<button onClick={back} className='my-4 mx-6 font-bold text-gray-500 hover:text-gray-300'>
 					Back
