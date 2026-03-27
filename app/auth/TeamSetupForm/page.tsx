@@ -55,7 +55,7 @@ export default function TeamSetupForm(){
 			<div className="relative z-10 rounded-xl py-12 px-8 bg-cyan-900/5 border-2 border-cyan-200/10 backdrop-blur-2xl">
 				<div>
 					{step === 1 && (<TeamInfo data={data} setData={setData} next={next}/>)}
-					{step === 2 && (<TeamMembers next={next} back={back}/>)}
+					{step === 2 && (<TeamMembers data={data} setData={setData} next={next} back={back}/>)}
 				</div>
 			</div>
 		</div>

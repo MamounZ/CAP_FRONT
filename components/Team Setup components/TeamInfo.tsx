@@ -29,7 +29,7 @@ export default function TeamInfo({data, setData, next} : TeamInfoProps){
 			<div className="flex justify-end">
 				<button onClick={next} className='py-4 px-6 rounded-xl text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50'>
 					Continue
-				</button >
+				</button>
 			</div>
 		</>
 	)
