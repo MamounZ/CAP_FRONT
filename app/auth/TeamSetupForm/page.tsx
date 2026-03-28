@@ -4,6 +4,7 @@ import TeamInfo from "@/components/Team Setup components/TeamInfo";
 import TeamMembers from "@/components/Team Setup components/TeamMembers";
 import { TeamSetupData } from "@/types/TeamSetupData";
 import ReviewRules from "@/components/Team Setup components/ReviewRules";
+import IntegrationAndSettings from "@/components/Team Setup components/IntegrationAndSettings";
 
 export default function TeamSetupForm(){
 	const [step, setStep] = useState(1)
@@ -22,7 +23,7 @@ export default function TeamSetupForm(){
 			},
 		],
 
-		rules: ["Security", "Performance", "Clean code"],
+		rules: ["Security", "Performance", "Clean code", "Memory leaks", "Best practices", "Framework-specific rules"],
 		customRules: [""],
 
 		repo: "",
@@ -59,7 +60,7 @@ export default function TeamSetupForm(){
 					{step === 1 && (<TeamInfo data={data} setData={setData} next={next}/>)}
 					{step === 2 && (<TeamMembers data={data} setData={setData} next={next} back={back}/>)}
 					{step === 3 && (<ReviewRules data={data} setData={setData} next={next} back={back}/>)}
-
+					{step === 4 && (<IntegrationAndSettings data={data} setData={setData} back={back}/>)}
 				</div>
 			</div>
 		</div>
