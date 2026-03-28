@@ -7,7 +7,6 @@ type TeamInfoProps = {
 }
 
 export default function TeamInfo({data, setData, next} : TeamInfoProps){
-	console.log(data)
 	return(
 		<>
 			<p className="text-4xl font-bold">Team Information</p>

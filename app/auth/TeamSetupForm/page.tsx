@@ -3,6 +3,7 @@ import { useState } from "react";
 import TeamInfo from "@/components/Team Setup components/TeamInfo";
 import TeamMembers from "@/components/Team Setup components/TeamMembers";
 import { TeamSetupData } from "@/types/TeamSetupData";
+import ReviewRules from "@/components/Team Setup components/ReviewRules";
 
 export default function TeamSetupForm(){
 	const [step, setStep] = useState(1)
@@ -57,6 +58,8 @@ export default function TeamSetupForm(){
 				<div>
 					{step === 1 && (<TeamInfo data={data} setData={setData} next={next}/>)}
 					{step === 2 && (<TeamMembers data={data} setData={setData} next={next} back={back}/>)}
+					{step === 3 && (<ReviewRules data={data} setData={setData} next={next} back={back}/>)}
+
 				</div>
 			</div>
 		</div>

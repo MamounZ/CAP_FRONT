@@ -30,7 +30,7 @@ export default function TeamMembers({data, setData, next, back}: TeamMembersProp
 		const updated = [...data.members, {name: "",github: "",email: "",role: "Owner" as const,type: "manual" as const}]
 		setData({ ...data, members: updated });
 	}
-	
+
 	return(
 		<>
 			<p className="text-4xl font-bold">Team Members</p>

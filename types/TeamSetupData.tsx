@@ -16,7 +16,7 @@ export type TeamSetupData = {
 
 	repo: string;
 	branch: string;
-	mode: "auto" | "manual";
+	mode: "auto" | "custom";
 
 	prReview: boolean;
 	commitReview: boolean;
