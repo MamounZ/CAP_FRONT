@@ -26,3 +26,18 @@ async function request<T>(
 
 	return data;
 }
+
+export async function register(payload: RegisterPayload) {
+	return request<AuthResponseData>("/auth/register", {
+		method: "POST",
+		body: JSON.stringify(payload),
+	});
+}
+
+export async function login(payload: LoginPayload) {
+	return request<AuthResponseData>("/auth/login", {
+		method: "POST",
+		body: JSON.stringify(payload),
+	});
+}
+
