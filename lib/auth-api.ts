@@ -52,3 +52,7 @@ export async function logout() {
 		method: "POST",
 	});
 }
+
+export function githubLogin() {
+	window.location.href = `${AUTH_BASE_URL}/auth/github`;
+}
