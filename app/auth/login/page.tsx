@@ -6,22 +6,38 @@ import AuthInput from "@/components/auth-input";
 import AuthLogo from "@/components/auth-logo";
 import GithubButton from "@/components/GithubButton";
 import Link from "next/link";
-import { useState } from "react"
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useAuthStore } from "@/store/auth-store";
 
 export default function LoginPage(){
+	const router = useRouter();
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
-	const [error, setError] = useState<string | null>(null)
+	// const [error, setError] = useState<string | null>(null)
 
-	function handleSubmit(event : React.FormEvent){
+	const { loginUser, isLoading, error, clearError } = useAuthStore();
+
+	async function handleSubmit(event : React.FormEvent){
 		event.preventDefault();
-		setError(null);
+		clearError();
+
 		if (!email.trim() || !password){
-			setError("Please fill in all fields")
+			// setError("Please fill in all fields")
 			return
 		}
+
 		console.log("email", email)
 		console.log("password", password)
+
+		const success = await loginUser({
+			email: email.trim().toLowerCase(),
+			password,
+		});
+
+		if (success) {
+			router.push("/dashboard");
+		}
 	}
 
 
@@ -42,8 +58,8 @@ export default function LoginPage(){
 						Forgot password?
 					</Link>
 				</div>
-				<button type="submit" className="w-full mt-4 px-4 py-3 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
-					Sign In
+				<button type="submit" disabled={isLoading} className="w-full mt-4 px-4 py-3 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 disabled:opacity-50">
+					{isLoading ? "Signing in..." : "Sign In"}
 				</button>
 			</form>
 			<Divider />
