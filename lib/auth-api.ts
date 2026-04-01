@@ -46,3 +46,9 @@ export async function getMe() {
 		method: "GET",
 	});
 }
+
+export async function logout() {
+	return request<{ message: string }>("/auth/logout", {
+		method: "POST",
+	});
+}
