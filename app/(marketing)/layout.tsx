@@ -27,16 +27,16 @@ export default function MarketingLayout({children}: LayoutProps){
 					</div>
 					<div className="border-t border-cyan-600" />
 					<div className="flex flex-col mt-4 mx-8 gap-2">
-						<a href="/#home" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-cyan-600">
+						<a href="/#home" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-gray-500">
 								Home
 							</a>
-							<a href="/#features" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-cyan-600">
+							<a href="/#features" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-gray-500">
 								Features
 							</a>
-							<a href="/#demo" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-cyan-600">
+							<a href="/#demo" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-gray-500">
 								Demo
 							</a>
-							<a href="/docs" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-cyan-600">
+							<a href="/docs" onClick={() => setIsMobileSidebarOpen(false)} className="p-4 rounded-lg text-gray-500">
 								Docs
 						</a>
 					</div>
