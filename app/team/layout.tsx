@@ -6,7 +6,7 @@ import SideBar from "@/components/team/SideBar"
 
 
 type TeamLayoutProps = {
-  children: React.ReactNode
+	children: React.ReactNode
 }
 
 export default function TeamLayout({ children }: TeamLayoutProps) {

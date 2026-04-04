@@ -54,7 +54,7 @@ export default function SideBar({isMobileSidebarOpen, setIsMobileSidebarOpen}:Si
 				</div>
 			</div>
 
-			<div className="absolute top-0 left-0 z-20 min-h-full w-80 border-r border-gray-500/50 bg-gray-900 hidden lg:block">
+			<div className=" fixed top-0 left-0 z-20 min-h-full w-80 border-r border-gray-500/50 bg-gray-900 hidden lg:block">
 				<div className="m-8">
 					<p className=" text-2xl">Team Hub</p>
 					<p className="mt-2 text-gray-500">AI Code Review</p>
