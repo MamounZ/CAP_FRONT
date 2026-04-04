@@ -1,17 +1,17 @@
 import { TrendingUp, Users, CheckCircle, Activity, UserPlus } from 'lucide-react';
 import { mockProjects, mockTeamAnalytics, mockTeamMembers } from '../data/mockData';
 import TeamDashboardCard from '@/components/team/TeamDashboardCard';
+import RecentReviews from '@/components/team/RecentReviews';
 
 export default function TeamDashboard(){
 	const teamMembersCount = mockTeamMembers.length
 	const projectMembers = mockProjects.length
-
 	return (
 		<div className="flex flex-col gap-8">
 			<div className="bg-gray-900 px-4 md:px-8 py-4 rounded-xl border border-gray-500/50">
 				<div className="flex justify-between">
 					<div className="space-y-3">
-						<p className="text-lg md:text-3xl">Development Team</p>
+						<p className="text-xl md:text-3xl">Development Team</p>
 						<div className="md:flex items-center gap-3 text-gray-500 text-sm md:text-md">
 							<p>{teamMembersCount} Members</p>
 							<p className='rounded-full md:border-4'></p>
@@ -27,7 +27,9 @@ export default function TeamDashboard(){
 				<TeamDashboardCard title='Issues Fixed' Icon={CheckCircle} score={mockTeamAnalytics.issuesFixed} trend={mockTeamAnalytics.issuesTrend} footer='This month'/>
 				<TeamDashboardCard title='Active Members' Icon={Users} score={mockTeamAnalytics.activeMembers} trend={null} footer={`${mockTeamAnalytics.onlineMembers} online now`}/>
 			</div>
-			<div className="bg-gray-900 px-8 py-4 rounded-xl border border-gray-500/50">asdasd</div>
+			<div className="bg-gray-900 px-8 py-4 rounded-xl border border-gray-500/50">
+				<RecentReviews/>
+			</div>
 			<div className="bg-gray-900 px-8 py-4 rounded-xl border border-gray-500/50">asdasd</div>
 		</div>
 	)
