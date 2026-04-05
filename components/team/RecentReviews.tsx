@@ -1,5 +1,5 @@
 import { mockCodeReviews } from "@/app/data/mockData"
-import { ProjectStatusBadge } from "./ProjectStatusBadge"
+import { CodeReviewStatusBadge } from "./CodeReviewStatusBadge"
 
 export default function RecentReviews(){
 	const recentReviews = mockCodeReviews.slice(0,6)
@@ -25,7 +25,7 @@ export default function RecentReviews(){
 						<td className='border-b border-gray-500/50 py-4 px-2'>{review.reviewer}</td>
 						<td className='border-b border-gray-500/50 py-4 px-2 hidden md:table-cell'>{review.score}</td>
 						<td className='border-b border-gray-500/50 py-4 px-2 hidden md:table-cell'>{review.issues}</td>
-						<td className='border-b border-gray-500/50 py-4 px-2'><ProjectStatusBadge status={`${review.status}`}/></td>
+						<td className='border-b border-gray-500/50 py-4 px-2'><CodeReviewStatusBadge status={`${review.status}`}/></td>
 						<td className='border-b border-gray-500/50 py-4 px-2 text-gray-500 hidden md:table-cell'>{review.date}</td>
 					</tr>
 				))}
