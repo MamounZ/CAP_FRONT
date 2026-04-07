@@ -3,6 +3,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from 'lucide-react';
 import { useState} from "react";
+import { useRouter } from 'next/navigation';
+import ColoredButton from "@/components/ColoredButton";
+import BorderedButton from "@/components/BorderedButton";
 
 type LayoutProps = {
 	children: React.ReactNode
@@ -10,6 +13,7 @@ type LayoutProps = {
 
 export default function MarketingLayout({children}: LayoutProps){
 	const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
+	const router = useRouter();
 
 	return (
 		<div className="min-h-screen bg-black text-white flex flex-col" >
@@ -50,7 +54,7 @@ export default function MarketingLayout({children}: LayoutProps){
 								<button onClick={() => setIsMobileSidebarOpen(true)} className="md:hidden">
 									<Menu className="w-8 h-8"/>
 								</button>
-								<Image src="/assets/CAPLogo.png" alt="logo" width={60} height={60} loading="eager" className="drop-shadow-[0_0_12px_rgba(34,211,238,0.55)] w-auto h-auto"/>
+								<Image src="/assets/CAPLogo.png" alt="logo" width={80} height={80} loading="eager" className="drop-shadow-[0_0_12px_rgba(34,211,238,0.55)] w-auto h-auto"/>
 								<div className="hidden md:flex items-center gap-8">
 									<a href="/#home" className="text-sm text-gray-300 hover:text-white transition-colors">
 										Home
@@ -67,12 +71,8 @@ export default function MarketingLayout({children}: LayoutProps){
 								</div>
 							</div>
 							<div className="flex items-center gap-4" >
-								<Link href="/auth/login" className=" p-3 bg-black/50 border border-gray-700 rounded-lg text-white font-medium hover:bg-black/70 hover:border-cyan-500/50 transition-all ">
-									Sign In
-								</Link>
-								<Link href="/auth/AccountTypeSelector" className=" p-3 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50">
-									Start Free
-								</Link>
+								<BorderedButton onClick={() => router.push("/auth/login")}>Sign In</BorderedButton>
+								<ColoredButton onClick={() => router.push("/auth/AccountTypeSelector")}>Start Free</ColoredButton>
 							</div>
 						</div>
 					</div>

@@ -2,6 +2,7 @@
 import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import ColoredButton from '../ColoredButton';
 
 export default function LandingPageHero() {
 	const router = useRouter();
@@ -20,9 +21,7 @@ export default function LandingPageHero() {
 					<p className='text-7xl text-cyan-400 font-bold'>Ship Faster with AI</p>
 				</div>
 				<p className='max-w-2xl text-lg sm:text-xl text-gray-400'>AI-powered code analysis that detects security issues, optimizes performance, and refactors your codebase—all in real-time with inline PR reviews.</p>
-				<button onClick={() => router.push('/auth/AccountTypeSelector')} className='mt-8 py-4 px-6 rounded-lg text-black font-bold bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50'>
-					Start Free
-				</button>
+				<ColoredButton onClick={() => router.push('/auth/AccountTypeSelector')}>Start Free</ColoredButton>
 				<div className='w-full max-w-5xl border border-white/10 rounded-xl bg-black/50 backdrop-blur-xl shadow-2xl shadow-cyan-500/15 overflow-hidden'>
 					<div className='flex items-center gap-1.5 py-6 px-6'>
 						<div className='bg-red-500 rounded-full h-4 w-4'></div>
