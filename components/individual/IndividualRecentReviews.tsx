@@ -1,0 +1,34 @@
+import { mockCodeReviews } from "@/app/data/mockData"
+import { CodeReviewStatusBadge } from "../team/CodeReviewStatusBadge"
+
+export default function IndividualRecentReviews(){
+	const recentReviews = mockCodeReviews.slice(0,6)
+
+	return (
+		<>
+			<table className='w-full'>
+				<thead>
+					<tr className='text-left'>
+						<th className='border-b border-gray-500/50 py-4 px-2 text-gray-500'>Project</th>
+						<th className='border-b border-gray-500/50 py-4 px-2 text-gray-500'>Type</th>
+						<th className='border-b border-gray-500/50 py-4 px-2 text-gray-500 hidden md:table-cell'>Issues</th>
+						<th className='border-b border-gray-500/50 py-4 px-2 text-gray-500'>Status</th>
+						<th className='border-b border-gray-500/50 py-4 px-2 text-gray-500 hidden md:table-cell'>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+				{recentReviews.map((review) => (
+					<tr key={review.id}>
+						<td className='border-b border-gray-500/50 py-4 px-2'>{review.project}</td>
+						<td className='border-b border-gray-500/50 py-4 px-2'>{review.reviewer}</td>
+						<td className='border-b border-gray-500/50 py-4 px-2 hidden md:table-cell'>{review.issues}</td>
+						<td className='border-b border-gray-500/50 py-4 px-2'><CodeReviewStatusBadge status={`${review.status}`}/></td>
+						<td className='border-b border-gray-500/50 py-4 px-2 text-gray-500 hidden md:table-cell'>{review.date}</td>
+					</tr>
+				))}
+				</tbody>
+			</table>
+		</>
+	)
+}
+

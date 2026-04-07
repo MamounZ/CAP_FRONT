@@ -1,8 +1,7 @@
 "use client"
 
-import { Plus, FolderGit2, GitBranch, AlertCircle, Clock, MessageSquare } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { useState } from 'react'
-import { ProjectGithubStatusBadge } from "@/components/team/ProjectGithubStatusBadge";
 import { mockProjects } from '@/app/data/mockData';
 import ProjectCard from '@/components/team/ProjectCard';
 
