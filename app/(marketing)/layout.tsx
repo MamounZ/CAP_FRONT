@@ -50,11 +50,11 @@ export default function MarketingLayout({children}: LayoutProps){
 				<nav>
 					<div className="mx-auto max-w-7xl px-6 py-4">
 						<div className="flex items-center justify-between">
-							<div className=" flex items-center gap-8">
+							<div className=" flex items-center md:gap-8">
 								<button onClick={() => setIsMobileSidebarOpen(true)} className="md:hidden">
-									<Menu className="w-8 h-8"/>
+									<Menu className="w-4 h-4"/>
 								</button>
-								<Image src="/assets/CAPLogo.png" alt="logo" width={80} height={80} loading="eager" className="drop-shadow-[0_0_12px_rgba(34,211,238,0.55)] w-auto h-auto"/>
+								<Image src="/assets/CAPLogo.png" alt="logo" width={60} height={60} loading="eager" className="drop-shadow-[0_0_12px_rgba(34,211,238,0.55)] w-auto h-auto"/>
 								<div className="hidden md:flex items-center gap-8">
 									<a href="/#home" className="text-sm text-gray-300 hover:text-white transition-colors">
 										Home
