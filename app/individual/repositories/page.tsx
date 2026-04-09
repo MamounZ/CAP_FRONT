@@ -9,6 +9,5 @@ export default function IndividualRepositories(){
 			<IndividualRepositoriesCard name="project" description="this is a project"  language="java script" stars={50} forks={88} lastUpdated="2 hours" isPrivate={true} />
 			<IndividualRepositoriesCard name="project" description="this is a project"  language="java script" stars={50} forks={88} lastUpdated="2 hours" isPrivate={true} />
 		</div>
-		// <CodeViewer/>
 	)
 }
