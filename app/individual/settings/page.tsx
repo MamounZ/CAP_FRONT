@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { User, Brain, Bell } from 'lucide-react';
 import Profile from "@/components/individual/settings/Profile";
+import AIPreferences from "@/components/individual/settings/AIPreferences";
+import Notification from "@/components/individual/settings/Notification";
 
 export default function settings(){
 	const [tab, setTab] = useState("Profile")
@@ -34,6 +36,12 @@ export default function settings(){
 			<div className="w-full">
 				{(tab === "Profile") && (
 					<Profile/>
+				)}
+				{(tab === "AI Preferences") && (
+					<AIPreferences/>
+				)}
+				{(tab === "Notification") && (
+					<Notification/>
 				)}
 			</div>
 
