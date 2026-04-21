@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {X, LayoutDashboard, History, Github, BarChart3, Settings, type LucideIcon} from "lucide-react"
+import {X, LayoutDashboard, History, Github, BarChart3, Settings, Users, type LucideIcon} from "lucide-react"
 import type { Dispatch, SetStateAction } from "react"
 import Image from "next/image";
 
@@ -13,6 +13,7 @@ const teamTabs: TeamTab[] = [
 	{ label: "Dashboard", href: "/individual", icon: LayoutDashboard },
 	{ label: "Review History", href: "/individual/reviewHistory", icon: History},
 	{ label: "Repositories", href: "/individual/repositories", icon: Github},
+	{ label: "My Teams", href: "/individual/myTeams", icon: Users },
 	{ label: "Analytics", href: "/individual/analytics", icon: BarChart3},
 	{ label: "Settings", href: "/individual/settings", icon: Settings},
 ]

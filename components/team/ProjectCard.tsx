@@ -15,7 +15,7 @@ export default function ProjectCard({name, language, score, issues, lastScan}: P
 					<div className="bg-gray-900 px-8 py-6 rounded-xl border border-gray-500/50">
 						<div className='flex justify-between gap-1'>
 							<div className='flex items-center gap-4'>
-								<FolderGit2 className='text-blue-700 size-8'/>
+								<FolderGit2 className='text-cyan-500 size-8'/>
 								<div>
 									<p className='text-xl'>{name}</p>
 									<p className='text-sm text-gray-500'>{language}</p>
@@ -45,7 +45,7 @@ export default function ProjectCard({name, language, score, issues, lastScan}: P
 						</div>
 					</div>
 					<div className='flex justify-center gap-2 mt-2'>
-						<button className='bg-blue-600 rounded-xl hover:bg-blue-800 transition-colors p-4 '>Open</button>
+						<button className='bg-linear-to-r from-cyan-500 to-teal-500 rounded-xl text-black font-bold hover:from-cyan-400 hover:to-teal-400 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 p-4 '>Open</button>
 						<button className='border border-gray-500/50 rounded-xl text-gray-500 hover:text-white hover:border-white p-4 transition-colors'><MessageSquare className='size-5' /></button>
 						<button className='border border-gray-500/50 rounded-xl text-gray-500 hover:text-white hover:border-white p-4 transition-colors'>Run Review</button>
 					</div>
